@@ -1,13 +1,13 @@
-name: Assign pull requests to project
+name: Move pull requests to project
 
 on:
   pull_request:
     types: [opened]
 jobs:
-  createCard:
+  automate-project-columns:
     runs-on: ubuntu-latest
     steps:
-      - name: Add project automatically to default project 
+      - name: GitHub Project Automation+
         uses: alex-page/github-project-automation-plus@v0.8.1
         with:
           project: LTPS Management
