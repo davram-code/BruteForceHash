@@ -1,10 +1,10 @@
-name: Assign pull requests to project
+name: Move pull requests to project
 
 on:
   pull_request:
     types: [opened]
 jobs:
-  createCard:
+  automate-project-columns:
     runs-on: ubuntu-latest
     steps:
       - name: GitHub Project Automation+
