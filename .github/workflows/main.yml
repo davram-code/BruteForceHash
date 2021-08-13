@@ -10,6 +10,6 @@ jobs:
       - name: Add project automatically to default project 
         uses: alex-page/github-project-automation-plus@v0.8.1
         with:
-          project: LTPS Management
-          column: Review in progress
+          project: "LTPS Management"
+          column: "Review in progress"
           repo-token: ${{ secrets.GITHUB_TOKEN }}
