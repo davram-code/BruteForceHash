@@ -1,0 +1,15 @@
+name: Assign pull requests to project
+
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  createCard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add project automatically to default project 
+        uses: alex-page/github-project-automation-plus@v0.8.1
+        with:
+          project: LTPS Management
+          column: Review in progress
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
