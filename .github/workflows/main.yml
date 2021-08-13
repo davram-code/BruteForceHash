@@ -1,15 +1,15 @@
 name: Move pull requests to project
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened]
 jobs:
-  automate-project-columns:
+  createCard:
     runs-on: ubuntu-latest
     steps:
-      - name: GitHub Project Automation+
-        uses: alex-page/github-project-automation-plus@v0.8.1
+      - name: Create or Update Project Card
+        uses: peter-evans/create-or-update-project-card@v1
         with:
-          project: LTPS Management
-          column: Review in progress
-          repo-token: ${{ secrets.GHPROJECT_TOKEN }}
+          project-name: LTPS Management
+          column-name: Review in progress
+          issue-number: ${{ github.event.number }}
